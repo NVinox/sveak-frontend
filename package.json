@@ -1,0 +1,42 @@
+{
+  "name": "sveak-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "types": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NVinox/sveak-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NVinox/sveak-frontend/issues"
+  },
+  "homepage": "https://github.com/NVinox/sveak-frontend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "babel-loader": "^10.1.1",
+    "browser-sync": "^3.0.4",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.98.0",
+    "terser-webpack-plugin": "^5.4.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
