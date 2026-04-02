@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$breakpoints: (
+  "sm": 320px,
+  "md": 640px,
+  "lg": 1025px,
+  "xl": 1230px,
+);
+
+@mixin responsive($size) {
+  @if map.has-key($breakpoints, $size) {
+    @media (min-width: map.get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "Неизвестный брейкпоинт: #{$size}. Проверь карту $breakpoints.";
+  }
+}
