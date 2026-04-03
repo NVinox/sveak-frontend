@@ -20,6 +20,11 @@ const paths = {
     watch: SOURCE_DIR + "/**/*.js",
     dest: BUILD_DIR + "/js",
   },
+  assets: {
+    src: SOURCE_DIR + "/assets/**/*.*",
+    watch: SOURCE_DIR + "/assets/**/*.*",
+    dest: BUILD_DIR + "/assets/",
+  },
   json: {
     src: SOURCE_DIR + "/data/**/*.json",
     watch: SOURCE_DIR + "/data/**/*.json",
