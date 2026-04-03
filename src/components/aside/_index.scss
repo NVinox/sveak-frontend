@@ -1,0 +1,14 @@
+.aside {
+  &__wrapper {
+    position: relative;
+    grid-row: 1 / 3;
+    background-color: #d6bdff;
+  }
+
+  &__nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px;
+  }
+}

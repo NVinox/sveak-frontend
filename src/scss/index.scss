@@ -1,2 +1,10 @@
+// Base
 @use "base/reset";
-@use "base/container";
+@use "base/dashboard";
+@use "base/main";
+@use "base/base";
+
+// Components
+@use "../components/header";
+@use "../components/aside";
+@use "../components/footer";
