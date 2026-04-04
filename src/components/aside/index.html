@@ -1,18 +1,7 @@
 <aside id="aside" class="aside aside__wrapper">
   <nav class="aside__nav">
     <ul>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
-      <li>
-        <a href="#">Test</a>
-      </li>
+      @@loop("../menuItem/index.html", "data/menu/index.json")
     </ul>
   </nav>
 </aside>

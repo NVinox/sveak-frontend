@@ -3,7 +3,7 @@
 .main {
   &__wrapper {
     padding: 20px;
-    background-color: #defee9;
+    background-color: #222222;
     flex: 1 0 100%;
 
     @include mixins.responsive("lg") {

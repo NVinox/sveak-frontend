@@ -6,11 +6,15 @@
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-color: #adfcc8;
+    background-color: #95d9ff;
 
     @include mixins.responsive("lg") {
       position: static;
       grid-column: span 2;
     }
+  }
+
+  &__title {
+    font-size: 15px;
   }
 }
