@@ -1,8 +1,28 @@
+@use "../../scss/base/mixins";
+@use "../../scss/base/vars";
+
 .aside {
   &__wrapper {
-    position: relative;
-    grid-row: 1 / 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: vars.$aside-width;
+    height: 100%;
     background-color: #d6bdff;
+    transition: transform vars.$transition-setting;
+    transform: translateX(-100%);
+    z-index: 10;
+
+    @include mixins.responsive("lg") {
+      position: relative;
+      grid-row: 1 / 3;
+      transition: none;
+      transform: translateX(0);
+    }
+  }
+
+  &__wrapper.active {
+    transform: translateX(0);
   }
 
   &__nav {

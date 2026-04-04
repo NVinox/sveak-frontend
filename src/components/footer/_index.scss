@@ -1,7 +1,12 @@
+@use "../../scss/base/mixins";
+
 .footer {
   &__wrapper {
     padding: 20px;
     background-color: #adfcc8;
-    grid-column: span 2;
+
+    @include mixins.responsive("lg") {
+      grid-column: span 2;
+    }
   }
 }

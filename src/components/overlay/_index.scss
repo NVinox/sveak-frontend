@@ -1,0 +1,28 @@
+@use "../../scss/base/mixins";
+@use "../../scss/base/vars";
+
+.overlay {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity vars.$transition-setting;
+    z-index: 10;
+
+    @include mixins.responsive("lg") {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__wrapper.active {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+}
