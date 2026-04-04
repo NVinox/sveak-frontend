@@ -1,3 +1,5 @@
+@use "../../scss/base/vars";
+
 .game {
   &__wrapper {
     overflow: hidden;
@@ -27,7 +29,7 @@
     border-radius: 16px;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform vars.$transition-setting;
   }
 
   &__link {
