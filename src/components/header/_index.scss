@@ -1,75 +1,19 @@
 @use "../../scss/base/mixins";
-@use "../../scss/base/vars";
 
 .header {
   &__wrapper {
     position: sticky;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     top: 0;
     left: 0;
     padding: 20px;
     background-color: #adfcc8;
     z-index: 5;
-  }
-
-  &__burger {
-    position: relative;
-    display: block;
-    width: 25px;
-    height: 21px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    z-index: 15;
 
     @include mixins.responsive("lg") {
-      display: none;
-      z-index: 0;
+      justify-content: start;
     }
-  }
-
-  &__burger-line {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #aaaaaa;
-    border-radius: 2px;
-    transition:
-      transform vars.$transition-setting,
-      top vars.$transition-setting,
-      opacity vars.$transition-setting;
-  }
-
-  &__burger-line:first-child {
-    top: 0;
-  }
-
-  &__burger-line:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__burger-line:last-child {
-    bottom: 0;
-  }
-
-  &__burger.active &__burger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  &__burger.active &__burger-line:first-child,
-  &__burger.active &__burger-line:last-child {
-    top: 50%;
-  }
-
-  &__burger.active &__burger-line:first-child {
-    transform: rotate(45deg);
-  }
-
-  &__burger.active &__burger-line:last-child {
-    transform: rotate(-45deg);
   }
 }
