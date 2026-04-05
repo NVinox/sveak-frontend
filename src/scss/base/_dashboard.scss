@@ -1,0 +1,15 @@
+@use "../../scss/base/mixins";
+
+.dashboard {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @include mixins.responsive("lg") {
+      display: grid;
+      grid-template-columns: 310px auto;
+      grid-template-rows: max-content auto max-content;
+    }
+  }
+}

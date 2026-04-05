@@ -1,0 +1,56 @@
+@use "../../scss/base/mixins";
+@use "../../scss/base/vars";
+
+.aside {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8f2d00;
+    transition: transform vars.$transition-setting;
+    transform: translateX(-100%);
+    z-index: 10;
+
+    @include mixins.responsive("xs") {
+      max-width: vars.$aside-width;
+    }
+
+    @include mixins.responsive("lg") {
+      position: relative;
+      grid-row: 1 / 3;
+      transition: none;
+      transform: translateX(0);
+    }
+  }
+
+  &__wrapper.active {
+    transform: translateX(0);
+  }
+
+  &__nav {
+    position: sticky;
+    overflow-y: auto;
+    max-height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 60px 20px 20px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    @include mixins.responsive("lg") {
+      padding: 20px;
+    }
+  }
+
+  &__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}

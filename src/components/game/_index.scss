@@ -1,0 +1,59 @@
+@use "../../scss/base/vars";
+
+.game {
+  &__wrapper {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  &__article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+  }
+
+  @media (hover: hover) {
+    &__article:hover &__picture {
+      transform: scale(1.2);
+    }
+  }
+
+  &__picture,
+  &__picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform vars.$transition-setting;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__footer {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: auto;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

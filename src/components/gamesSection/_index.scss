@@ -1,0 +1,28 @@
+@use "../../scss/base/mixins";
+
+.games {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__list {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(115px, 150px));
+    gap: 20px;
+
+    @include mixins.responsive("xs") {
+      grid-template-columns: repeat(3, minmax(115px, 170px));
+    }
+
+    @include mixins.responsive("lg") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mixins.responsive("xl") {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}

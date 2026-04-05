@@ -1,0 +1,65 @@
+@use "../../scss/base/vars";
+@use "../../scss/base/mixins";
+
+.burger {
+  &__button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 25px;
+    height: 21px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 15;
+
+    @include mixins.responsive("lg") {
+      display: none;
+      z-index: 0;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #222222;
+    border-radius: 2px;
+    transition:
+      transform vars.$transition-setting,
+      top vars.$transition-setting,
+      opacity vars.$transition-setting;
+  }
+
+  &__line:first-child {
+    top: 0;
+  }
+
+  &__line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__line:last-child {
+    bottom: 0;
+  }
+
+  &__button.active &__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  &__button.active &__line:first-child,
+  &__button.active &__line:last-child {
+    top: 50%;
+  }
+
+  &__button.active &__line:first-child {
+    transform: rotate(45deg);
+  }
+
+  &__button.active &__line:last-child {
+    transform: rotate(-45deg);
+  }
+}

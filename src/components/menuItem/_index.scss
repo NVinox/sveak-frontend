@@ -1,0 +1,19 @@
+@use "../../scss/base/vars";
+
+.menu-item {
+  &__link {
+    font-weight: 700;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    transition:
+      background-color vars.$transition-setting,
+      color vars.$transition-setting;
+    border-radius: 30px;
+  }
+
+  &__link:hover {
+    color: #fff;
+    background-color: #222;
+  }
+}
