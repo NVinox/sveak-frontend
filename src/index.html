@@ -1,7 +1,22 @@
 <!doctype html>
 <html lang="ru">
   @@include("components/head/index.html", {"title": "Тестовый проект"})
-  <body></body>
+
+  <body>
+    @@include("components/overlay/index.html")
+    @@include("components/burgerButton/index.html")
+
+    <div class="dashboard dashboard__wrapper">
+      @@include("components/header/index.html")
+      @@include("components/aside/index.html")
+
+      <main class="main main__wrapper">
+        @@include("components/gamesSection/index.html")
+      </main>
+
+      @@include("components/footer/index.html")
+    </div>
+  </body>
 
   <script src="js/index.min.js?v=@@rev" defer></script>
 </html>

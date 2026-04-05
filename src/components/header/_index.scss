@@ -1,0 +1,19 @@
+@use "../../scss/base/mixins";
+
+.header {
+  &__wrapper {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #95d9ff;
+    z-index: 5;
+
+    @include mixins.responsive("lg") {
+      justify-content: start;
+    }
+  }
+}

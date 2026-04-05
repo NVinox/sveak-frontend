@@ -1,2 +1,16 @@
+// Base
 @use "base/reset";
-@use "base/container";
+@use "base/dashboard";
+@use "base/main";
+@use "base/titles";
+@use "base/base";
+
+// Components
+@use "../components/overlay";
+@use "../components/header";
+@use "../components/aside";
+@use "../components/game";
+@use "../components/gamesSection";
+@use "../components/footer";
+@use "../components/menuItem";
+@use "../components/burgerButton";
