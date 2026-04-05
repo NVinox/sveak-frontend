@@ -31,12 +31,26 @@
 
   &__nav {
     position: sticky;
+    overflow-y: auto;
+    max-height: 100vh;
     top: 0;
     left: 0;
     padding: 60px 20px 20px;
 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
     @include mixins.responsive("lg") {
       padding: 20px;
     }
+  }
+
+  &__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
   }
 }
