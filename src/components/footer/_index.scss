@@ -9,6 +9,7 @@
     padding: 20px;
     background-color: vars.$footer-bg;
     border-top: 1px solid vars.$main-border-color;
+    z-index: 1;
 
     @include mixins.responsive("lg") {
       position: static;
