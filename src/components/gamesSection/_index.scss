@@ -9,11 +9,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(115px, 150px));
     gap: 20px;
 
-    @include mixins.responsive("md") {
-      grid-template-columns: repeat(3, 1fr);
+    @include mixins.responsive("xs") {
+      grid-template-columns: repeat(3, minmax(115px, 170px));
     }
 
     @include mixins.responsive("lg") {
