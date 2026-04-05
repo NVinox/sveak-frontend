@@ -32,7 +32,6 @@ export class Aside {
   }
 
   _changeQueryScreen(e) {
-    console.log("sdfsdfsf");
     if (e.target.matches) {
       document.body.style.overflow = "auto";
     } else {
