@@ -1,12 +1,9 @@
-@use "../../scss/base/mixins";
+@use "../base/vars";
 
 .main {
   &__wrapper {
     padding: 20px;
-    background-color: #222222;
+    background-color: vars.$main-bg;
     flex: 1 0 100%;
-
-    @include mixins.responsive("lg") {
-    }
   }
 }
