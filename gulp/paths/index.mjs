@@ -25,10 +25,20 @@ const paths = {
     watch: SOURCE_DIR + "/assets/**/*.*",
     dest: BUILD_DIR + "/assets/",
   },
+  public: {
+    src: SOURCE_DIR + "/public/**/*.*",
+    watch: SOURCE_DIR + "/public/**/*.*",
+    dest: BUILD_DIR + "/public/",
+  },
   json: {
     src: SOURCE_DIR + "/data/**/*.json",
     watch: SOURCE_DIR + "/data/**/*.json",
     dest: BUILD_DIR + "/data/",
+  },
+  manifest: {
+    src: SOURCE_DIR + "/site.webmanifest",
+    watch: SOURCE_DIR + "/site.webmanifest",
+    dest: BUILD_DIR + "/",
   },
 };
 

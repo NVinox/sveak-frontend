@@ -4,6 +4,8 @@ import { js } from "./gulp/tasks/js.mjs";
 import { json } from "./gulp/tasks/json.mjs";
 import { html } from "./gulp/tasks/html.mjs";
 import { scss } from "./gulp/tasks/scss.mjs";
+import { publicImg } from "./gulp/tasks/public.mjs";
+import { manifest } from "./gulp/tasks/manifest.mjs";
 import { createWebp, optimizeImages } from "./gulp/tasks/assets.mjs";
 import { clean } from "./gulp/tasks/clean.mjs";
 import { bs } from "./gulp/tasks/browserSync.mjs";
@@ -17,16 +19,36 @@ function watching() {
   watch([paths.json.watch], json);
   watch([paths.assets.watch], createWebp);
   watch([paths.assets.watch], optimizeImages);
+  watch([paths.public.watch], publicImg);
+  watch([paths.manifest.watch], manifest);
 }
 
 const build = series(
   clean,
-  parallel(html, scss, js, json, createWebp, optimizeImages),
+  parallel(
+    html,
+    scss,
+    js,
+    json,
+    createWebp,
+    optimizeImages,
+    publicImg,
+    manifest,
+  ),
 );
 
 export { build };
 export default series(
   clean,
-  parallel(html, scss, js, json, createWebp, optimizeImages),
+  parallel(
+    html,
+    scss,
+    js,
+    json,
+    createWebp,
+    optimizeImages,
+    publicImg,
+    manifest,
+  ),
   watching,
 );

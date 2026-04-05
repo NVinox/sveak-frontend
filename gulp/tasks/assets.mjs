@@ -26,19 +26,4 @@ function optimizeImages() {
     .pipe(bs.stream());
 }
 
-// function assets() {
-//   return src([paths.assets.src], { encoding: false })
-//     .pipe(gulpWebp({ quality: 70 }))
-//     .pipe(dest(paths.assets.dest))
-//     .pipe(src(paths.assets.src), { encoding: false })
-//     .pipe(
-//       imagemin([
-//         imageminMozjpeg({ quality: 75, progressive: true }),
-//         imageminOptipng({ optimizationLevel: 5 }),
-//       ]),
-//     )
-//     .pipe(dest(paths.assets.dest))
-//     .pipe(bs.stream());
-// }
-
 export { createWebp, optimizeImages };
