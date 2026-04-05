@@ -1,5 +1,5 @@
 export class Games {
-  _md = 640;
+  _xs = 480;
   _lg = 1025;
   _xl = 1230;
 
@@ -17,7 +17,7 @@ export class Games {
 
   _setGamesStates() {
     this._gamesCounts[0] = 2;
-    this._gamesCounts[this._md] = 3;
+    this._gamesCounts[this._xs] = 3;
     this._gamesCounts[this._lg] = 4;
     this._gamesCounts[this._xl] = 5;
   }
@@ -38,7 +38,7 @@ export class Games {
 
     if (width >= this._xl) columns = this._gamesCounts[this._xl];
     else if (width >= this._lg) columns = this._gamesCounts[this._lg];
-    else if (width >= this._md) columns = this._gamesCounts[this._md];
+    else if (width >= this._xs) columns = this._gamesCounts[this._xs];
 
     const liElements = this._gamesUl.querySelectorAll("li");
 

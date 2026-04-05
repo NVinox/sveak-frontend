@@ -1,4 +1,5 @@
 @use "../../scss/base/mixins";
+@use "../../scss/base/vars";
 
 .header {
   &__wrapper {
@@ -9,11 +10,20 @@
     top: 0;
     left: 0;
     padding: 20px;
-    background-color: #95d9ff;
+    background-color: vars.$header-bg;
+    border-bottom: 1px solid vars.$main-border-color;
     z-index: 5;
 
     @include mixins.responsive("lg") {
       justify-content: start;
     }
+  }
+
+  &__logo {
+    color: #fff;
+  }
+
+  &__logo:focus {
+    outline: 2px solid vars.$outline-color;
   }
 }
