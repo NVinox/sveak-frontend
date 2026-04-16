@@ -19,11 +19,25 @@
     }
   }
 
-  &__logo {
-    color: #fff;
+  &__links {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-left: auto;
   }
 
-  &__logo:focus {
+  &__link {
+    color: #949494;
+    transition: color vars.$transition-setting;
+  }
+
+  &__link:focus {
     outline: 2px solid vars.$outline-color;
+  }
+
+  @media (hover: hover) {
+    &__link:hover {
+      color: #e6e6e6;
+    }
   }
 }
