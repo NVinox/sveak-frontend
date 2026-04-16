@@ -5,10 +5,10 @@ export class Games {
 
   _gamesCounts = {};
 
-  _gamesUl = document.getElementById("games");
+  _gamesList = document.getElementById("games");
 
   init() {
-    if (this._gamesUl) {
+    if (this._gamesList) {
       this._setGamesStates();
       this._attachMediaQueries();
       this._updateLayout();
@@ -40,15 +40,15 @@ export class Games {
     else if (width >= this._lg) columns = this._gamesCounts[this._lg];
     else if (width >= this._xs) columns = this._gamesCounts[this._xs];
 
-    const liElements = this._gamesUl.querySelectorAll("li");
+    const articles = this._gamesList.querySelectorAll("article");
 
-    liElements.forEach((li) => (li.style.display = "block"));
+    articles.forEach((article) => (article.style.display = "block"));
 
-    const remainder = liElements.length % columns;
+    const remainder = articles.length % columns;
 
     if (remainder) {
       for (let i = 0; i < remainder; i++) {
-        liElements[liElements.length - 1 - i].style.display = "none";
+        articles[articles.length - 1 - i].style.display = "none";
       }
     }
   }

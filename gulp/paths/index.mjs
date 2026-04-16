@@ -25,6 +25,11 @@ const paths = {
     watch: SOURCE_DIR + "/assets/**/*.*",
     dest: BUILD_DIR + "/assets/",
   },
+  fonts: {
+    src: SOURCE_DIR + "/fonts/*.*",
+    watch: SOURCE_DIR + "/fonts/*.*",
+    dest: BUILD_DIR + "/fonts/",
+  },
   public: {
     src: SOURCE_DIR + "/public/**/*.*",
     watch: SOURCE_DIR + "/public/**/*.*",

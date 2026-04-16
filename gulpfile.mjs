@@ -4,6 +4,7 @@ import { js } from "./gulp/tasks/js.mjs";
 import { json } from "./gulp/tasks/json.mjs";
 import { html } from "./gulp/tasks/html.mjs";
 import { scss } from "./gulp/tasks/scss.mjs";
+import { fonts } from "./gulp/tasks/fonts.mjs";
 import { publicImg } from "./gulp/tasks/public.mjs";
 import { manifest } from "./gulp/tasks/manifest.mjs";
 import { createWebp, optimizeImages } from "./gulp/tasks/assets.mjs";
@@ -21,6 +22,7 @@ function watching() {
   watch([paths.assets.watch], optimizeImages);
   watch([paths.public.watch], publicImg);
   watch([paths.manifest.watch], manifest);
+  watch([paths.fonts.watch], fonts);
 }
 
 const build = series(
@@ -34,6 +36,7 @@ const build = series(
     optimizeImages,
     publicImg,
     manifest,
+    fonts,
   ),
 );
 
@@ -49,6 +52,7 @@ export default series(
     optimizeImages,
     publicImg,
     manifest,
+    fonts,
   ),
   watching,
 );

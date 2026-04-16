@@ -10,6 +10,7 @@
       background-color vars.$transition-setting,
       color vars.$transition-setting;
     border-radius: 30px;
+    hyphens: auto;
   }
 
   &__link:focus {
